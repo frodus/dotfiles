@@ -1,0 +1,21 @@
+i3lock -B 20 -c 00000078 \
+    --indicator \
+        --radius 123 \
+        --inside-color "#00000077" \
+        --insidever-color "#00000077" \
+        --insidewrong-color "#00000077" \
+        --verif-color "#ffffffff" \
+        --wrong-color "#ffffffff" \
+        --modif-color "#ffffffff" \
+        --ring-width 12 \
+        --ring-color "#00000000" \
+        --ringver-color "#ffffffff" \
+        --ringwrong-color "#ff0000ff" \
+        --line-uses-ring \
+        --keyhl-color "#ffffffff" \
+        --bshl-color "000000" \
+        --separator-color "#00000000" \
+    --clock \
+        --time-align 0 \
+        --time-color "#ffffffff" \
+        --date-color "#ffffffff"

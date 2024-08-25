@@ -28,7 +28,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/script/lockscreen.sh
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -39,7 +39,7 @@ exec --no-startup-id picom
 exec --no-startup-id polybar
 exec --no-startup-id variety
 
-
+exec --no-startup-id "xidlehook --not-when-fullscreen --timer 120 ~/.config/i3/script/lockscreen.sh ''"
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -167,33 +167,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 bindsym $mod+Shift+s --release exec --no-startup-id flameshot gui
 
-
 # Lock if not already locked
-bindsym $mod+b exec i3lock-fancy-multimonitor -fec 00000078 \
-    --indicator \
-        --radius 123 \
-        --inside-color "#00000077" \
-        --insidever-color "#00000077" \
-        --insidewrong-color "#00000077" \
-        --verif-color "#ffffffff" \
-        --wrong-color "#ffffffff" \
-        --modif-color "#ffffffff" \
-        --ring-width 12 \
-        --ring-color "#00000000" \
-        --ringver-color "#ffffffff" \
-        --ringwrong-color "#ff0000ff" \
-        --line-uses-ring \
-        --keyhl-color "#ffffffff" \
-        --bshl-color "000000" \
-        --separator-color "#00000000" \
-    --clock \
-        --time-align 0 \
-        --time-color "#ffffffff" \
-        --date-color "#ffffffff"
-
-
-
-
+bindsym Mod4+l exec ~/.config/i3/script/lockscreen.sh
 
 
 # resize window (you can also use the mouse for that)

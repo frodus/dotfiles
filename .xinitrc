@@ -1,2 +1,0 @@
-exec xfsettingsd &
-exec dwm
